@@ -7,3 +7,8 @@ group :test do
   gem 'minitest-colorize', github: 'ysbaddaden/minitest-colorize'
   gem 'rack-test', require: 'rack/test'
 end
+
+group :development do
+  gem 'guard-minitest', require: false
+  gem 'guard-pow',      require: false
+end
