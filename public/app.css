@@ -1,0 +1,19 @@
+body {
+  font-family: monospace
+}
+
+.flash {
+  border-radius: 2px;
+  border: 1px solid;
+  padding: 4px 16px;
+}
+.flash.notice {
+  background-color: rgba(0, 128, 0, 0.2);
+  border-color: #008000;
+  color: #008000;
+}
+.flash.error {
+  background-color: rgba(200, 0, 0, 0.2);
+  border-color: #c80000;
+  color: #c80000;
+}

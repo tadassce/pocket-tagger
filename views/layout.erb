@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <title>Pocket Tagger</title>
+  <link type="text/css" rel="stylesheet" href="/app.css"/>
+</head>
+<body>
+  <header>
+    <% if flash[:notice] %>
+      <div class="flash notice"><%= flash[:notice] %></div>
+    <% end %>
+    <% if flash[:error] %>
+      <div class="flash error"><%= flash[:error] %></div>
+    <% end %>
+  </header>
+
+  <%= yield %>
+
+</body>
+</html>

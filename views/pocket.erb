@@ -1,0 +1,11 @@
+<ul>
+  <% @items["list"].values.each do |item| %>
+    <li><%= item["word_count"] %> -- <%= item["resolved_title"] %></li>
+  <% end %>
+</ul>
+
+<br>
+<%= session.inspect %>
+
+<br><br>
+<%= @items %>
