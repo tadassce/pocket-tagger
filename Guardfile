@@ -1,8 +1,3 @@
-notification :tmux,
-  display_message: true,
-  default_message_color: 'black',
-  timeout: 5
-
 guard :minitest do
   watch(%r{^spec/(.*)_spec\.rb$})
   # watch(%r{^lib/(.+)\.rb$})         { |m| "spec/#{m[1]}_spec.rb" }
