@@ -64,7 +64,7 @@ class PocketTaggerApp < Sinatra::Base
     {
       development: 'http://pocket-tagger.dev/oauth/callback',
       test:        'http://pocket-tagger.dev/oauth/callback',
-      production:  'TODO'
+      production:  'http://tag-pocket.herokuapp.com/oauth/callback'
     }.fetch(settings.environment)
   end
 
