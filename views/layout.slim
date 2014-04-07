@@ -2,13 +2,21 @@ doctype html
 html
 head
   title
-    | Pocket Tagger
+    | pocket tagger
   link rel='stylesheet' type='text/css' href='/app.css'
 body
   header
+    h1
+      | pocket tagger
     - [:notice, :error].each do |msg_type|
       - if flash[msg_type]
         div[class="flash #{msg_type}"]
           = flash[msg_type]
 
   == yield
+
+  footer
+    | Made by
+    a< href="http://twitter.com/tadassce" @tadassce
+    | . Code on
+    a< href="https://github.com/tadassce/pocket-tagger" GitHub

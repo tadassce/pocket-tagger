@@ -1,19 +1,73 @@
 body {
-  font-family: monospace
+  background-color: #f1f1f1;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 1em 2em;
+}
+
+h1 {
+  color: #808184;
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 2em;
+}
+
+a {
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #5dcfca;
 }
 
 .flash {
-  border-radius: 2px;
-  border: 1px solid;
-  padding: 4px 16px;
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: 2em;
+  padding: .5em 1em;
 }
 .flash.notice {
-  background-color: rgba(0, 128, 0, 0.2);
-  border-color: #008000;
-  color: #008000;
+  background-color: #95ecc5;
+  color: #555;
 }
 .flash.error {
-  background-color: rgba(200, 0, 0, 0.2);
-  border-color: #c80000;
-  color: #c80000;
+  background-color: #f05d6b;
+  color: #eee;
+}
+
+input[type=submit], .connect {
+  background-color: #63c5c2;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 4px #3a807c;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  padding: .8em 1.625em;
+  text-decoration: none;
+}
+
+input[type=submit]:hover, .connect:hover {
+  color: #fff;
+}
+
+input[type=submit]:active, .connect:active {
+  box-shadow: 0px 2px #3a807c;
+  position: relative;
+  top: 2px;
+}
+
+input[type=number] {
+  border-radius: 4px;
+  border: 1px solid #c8c8c8;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  margin-right: .5em;
+  padding: .4em .5em;
+  width: 4em;
+}
+
+footer {
+  color: #808184;
+  margin-top: 4em;
 }
