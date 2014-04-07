@@ -8,6 +8,9 @@ although you can configure this how you like.
 
 [Try it yourself](http://tag-pocket.herokuapp.com)
 
+Something's not working as expected?
+[Create an issue](https://github.com/tadassce/pocket-tagger/issues)
+
 
 ## TODO
 
