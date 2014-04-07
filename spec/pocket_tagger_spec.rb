@@ -10,7 +10,6 @@ describe PocketTagger do
         articles = PocketTagger.new(token).articles
       end
       articles.first.word_count.must_equal 532
-      # articles[16].tags.include?('code').must_equal true
     end
 
     it 'calls the client with the token from initializer' do
