@@ -18,6 +18,14 @@ describe PocketTagger do
       client.expects(:retrieve).returns('list' => {})
       PocketTagger.new('foo').articles
     end
+
+    it 'initializes the Article with the speed from initializer' do
+      Article.expects(:new).with(anything, 300).at_least_once
+
+      VCR.use_cassette('retrieve') do
+        PocketTagger.new('foo', 300).articles
+      end
+    end
   end
 
   describe '#tag!' do
