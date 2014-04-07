@@ -1,13 +1,21 @@
 body {
   background-color: #f1f1f1;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 1em 2em;
+  color: #555;
+}
+
+body, input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1 {
   color: #808184;
   font-size: 2em;
   font-weight: 300;
+  margin-bottom: 1em;
+}
+
+p {
   margin-bottom: 2em;
 }
 
@@ -42,6 +50,7 @@ input[type=submit], .connect {
   box-shadow: 0px 4px #3a807c;
   color: #fff;
   cursor: pointer;
+  float: left;
   font-size: 1em;
   padding: .8em 1.625em;
   text-decoration: none;
@@ -60,7 +69,6 @@ input[type=submit]:active, .connect:active {
 input[type=number] {
   border-radius: 4px;
   border: 1px solid #c8c8c8;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
   margin-right: .5em;
   padding: .4em .5em;
@@ -70,4 +78,6 @@ input[type=number] {
 footer {
   color: #808184;
   margin-top: 4em;
+  float: left;
+  clear: left;
 }
