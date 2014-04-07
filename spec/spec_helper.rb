@@ -1,5 +1,13 @@
 ENV['RACK_ENV'] = 'test'
 
-require 'minitest/autorun'
-require 'minitest/colorize'
-require 'mocha/mini_test'
+if ENV['COV']
+  require 'simplecov'
+  SimpleCov.start
+end
+
+Bundler.require(:test)
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/vcr_cassettes'
+  c.hook_into :webmock
+end

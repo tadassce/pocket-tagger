@@ -2,23 +2,55 @@ class PocketTaggerApp < Sinatra::Base
   use Rack::Flash
   enable :sessions
 
-  get '/' do
-    if authenticated?
-      get_items
-      erb :pocket
-    else
-      erb :index
+  before do
+    public_paths = [
+      '/',
+      '/oauth/connect',
+      '/oauth/callback',
+      '/logout'
+    ]
+    if !authenticated? && !public_paths.include?(request.path_info)
+      flash[:error] = 'Please authenticate'
+      redirect '/'
     end
   end
 
-  get "/oauth/connect" do
+  get '/' do
+    if authenticated?
+      redirect '/tag'
+    else
+      slim :index
+    end
+  end
+
+  get '/tag' do
+    slim :tag
+  end
+
+  post '/tag' do
+    token = session[:access_token]
+    speed = params[:reading_speed]
+
+    items_tagged = PocketTagger.new(token, speed).tag!
+
+    if items_tagged.to_i > 0
+      flash[:notice] = "Success! #{items_tagged} items were tagged."
+    elsif items_tagged == 0
+      flash[:notice] = "Hm, we haven't found any items to tag this time"
+    else
+      flash[:error] = 'Something went wrong.'
+    end
+    slim :tag
+  end
+
+  get '/oauth/connect' do
     store_pocket_code
     redirect pocket_auth_url
   end
 
-  get "/oauth/callback" do
+  get '/oauth/callback' do
     authenticate
-    redirect "/"
+    redirect '/tag'
   end
 
   get '/logout' do
@@ -28,16 +60,20 @@ class PocketTaggerApp < Sinatra::Base
 
   private
 
-  def callback_url
-    "http://pocket-tagger.dev/oauth/callback"
+  def callback_uri
+    {
+      development: 'http://pocket-tagger.dev/oauth/callback',
+      test:        'http://pocket-tagger.dev/oauth/callback',
+      production:  'TODO'
+    }.fetch(settings.environment)
   end
 
   def store_pocket_code
-    session[:code] = Pocket.get_code(redirect_uri: callback_url)
+    session[:code] = Pocket.get_code(redirect_uri: callback_uri)
   end
 
   def pocket_auth_url
-    Pocket.authorize_url(code: session[:code], redirect_uri: callback_url)
+    Pocket.authorize_url(code: session[:code], redirect_uri: callback_uri)
   end
 
   def authenticated?
@@ -45,24 +81,15 @@ class PocketTaggerApp < Sinatra::Base
   end
 
   def authenticate
-    if session[:code]
-      session[:access_token] = Pocket.get_access_token(session[:code])
-      flash[:notice] = "Authenticated!"
-    else
-      flash[:error] = "Wah wah wahhhh…"
+    code = session[:code]
+    if code
+      session[:access_token] = Pocket.get_access_token(code)
+      flash[:notice] = 'Authenticated!'
     end
   end
 
   def logout
     session.clear
-    flash[:notice] = "Logged out"
-  end
-
-  def client
-    Pocket.client(access_token: session[:access_token])
-  end
-
-  def get_items
-    @items = client.retrieve(detailType: :complete)
+    flash[:notice] = 'Logged out'
   end
 end
