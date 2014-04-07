@@ -1,0 +1,14 @@
+doctype html
+html
+head
+  title
+    | Pocket Tagger
+  link rel='stylesheet' type='text/css' href='/app.css'
+body
+  header
+    - [:notice, :error].each do |msg_type|
+      - if flash[msg_type]
+        div[class="flash #{msg_type}"]
+          = flash[msg_type]
+
+  == yield
