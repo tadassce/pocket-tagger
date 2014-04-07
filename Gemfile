@@ -1,14 +1,22 @@
 source 'https://rubygems.org'
 
-gem 'sinatra'
-gem 'pocket-ruby', require: 'pocket'
-gem 'rack-flash3', require: 'rack/flash'
+gem 'sinatra',     '~> 1.4.4'
+gem 'pocket-ruby', '~> 0.0.5', require: 'pocket'
+gem 'rack-flash3', '~> 1.0.5', require: 'rack/flash'
+gem 'slim',        '~> 2.0.2'
 
 group :test do
-  gem 'minitest'
-  gem 'minitest-colorize', github: 'ysbaddaden/minitest-colorize'
-  gem 'rack-test', require: false
-  gem 'mocha'
+  gem 'minitest',          require: 'minitest/autorun'
+  gem 'minitest-colorize', github:  'ysbaddaden/minitest-colorize'
+  gem 'rack-test',         require: false
+  gem 'webmock',           require: 'webmock/minitest'
+  gem 'mocha',             require: 'mocha/mini_test'
+  gem 'vcr'
+  gem 'simplecov',         require: false
+end
+
+group :test, :development do
+  gem 'awesome_print'
 end
 
 group :development do
