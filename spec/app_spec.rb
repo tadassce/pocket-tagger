@@ -75,7 +75,7 @@ describe PocketTaggerApp do
 
       it 'shows a flash error message on the front page after redirect' do
         follow_redirect!
-        last_response.body.must_include 'Access denied'
+        last_response.body.must_include 'Please authenticate'
       end
     end
 
