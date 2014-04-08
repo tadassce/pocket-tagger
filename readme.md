@@ -1,4 +1,9 @@
-[![Code Climate](https://img.shields.io/codeclimate/github/tadassce/pocket-tagger.svg)](https://codeclimate.com/github/tadassce/pocket-tagger)
+[![Build Status]
+  (https://travis-ci.org/tadassce/pocket-tagger.svg?branch=master)]
+  (https://travis-ci.org/tadassce/pocket-tagger)
+[![Code Climate]
+  (https://img.shields.io/codeclimate/github/tadassce/pocket-tagger.svg)]
+  (https://codeclimate.com/github/tadassce/pocket-tagger)
 
 # Pocket Tagger
 
