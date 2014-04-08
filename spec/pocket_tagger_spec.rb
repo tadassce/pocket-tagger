@@ -9,7 +9,8 @@ describe PocketTagger do
         token = '<Insert access token here>'
         articles = PocketTagger.new(token).articles
       end
-      articles.first.word_count.must_equal 532
+      articles.first.word_count.must_equal 1510
+      articles.size.must_equal 6
     end
 
     it 'calls the client with the token from initializer' do

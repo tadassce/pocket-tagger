@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://getpocket.com/v3/get
+    body:
+      encoding: UTF-8
+      string: '{"detailType":"complete","consumer_key":"22222-dddddddddddddddddddddddd","access_token":"33333333-ffff-9999-5555-222222"}'
+    headers:
+      User-Agent:
+      - Pocket Ruby Gem 0.0.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 01 Apr 2014 09:45:00 GMT
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="ALL CURa ADMa DEVa OUR IND UNI COM NAV INT STA
+        PRE"
+      Pragma:
+      - no-cache
+      Server:
+      - Apache
+      Set-Cookie:
+      - PHPSESSID=6q45953ikfpmi7th6ih1mmihr0; path=/
+      Status:
+      - 200 OK
+      X-Limit-Key-Limit:
+      - '10000'
+      X-Limit-Key-Remaining:
+      - '9999'
+      X-Limit-Key-Reset:
+      - '3600'
+      X-Limit-User-Limit:
+      - '320'
+      X-Limit-User-Remaining:
+      - '319'
+      X-Limit-User-Reset:
+      - '3600'
+      X-Source:
+      - Pocket
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{ "complete": 1, "list": { "20100843": { "excerpt": "Eric Wong''s mostly pure-Ruby HTTP backend, Unicorn, is an inspiration. I''ve studied this file for a couple of days now and it''s undoubtedly one of the best, most densely packed examples of Unix programming in Ruby I''ve come across.", "favorite": "0", "given_title": "I like Unicorn because it''s Unix", "given_url": "http://tomayko.com/writings/unicorn-is-unix", "has_image": "1", "has_video": "0", "image": { "height": "300", "item_id": "20100843", "src": "http://images-2.redbubble.com/img/clothing/bodycolor:white/size:medium/style:mens/view:main/76841-16-the-wrong-unicorn-t-shirt.jpg", "width": "300" }, "images": { "1": { "caption": "", "credit": "", "height": "300", "image_id": "1", "item_id": "20100843", "src": "http://images-2.redbubble.com/img/clothing/bodycolor:white/size:medium/style:mens/view:main/76841-16-the-wrong-unicorn-t-shirt.jpg", "width": "300" } }, "is_article": "1", "is_index": "0", "item_id": "20100843", "resolved_id": "20100843", "resolved_title": "I like Unicorn because it''s Unix", "resolved_url": "http://tomayko.com/writings/unicorn-is-unix", "sort_id": 52, "status": "0", "tags": {"10min": {"item_id": "20100843", "tag": "10min"}}, "time_added": "1388920888", "time_favorited": "0", "time_read": "0", "time_updated": "1395513588", "word_count": "1510" }, "268532153": { "excerpt": "Our latest post comes from Giles Bowkett. Giles recently wrote a book, Rails As She Is Spoke, which explores Rails’ take on OOP and its implications. It’s an informative and entertaining read, and you should buy it.", "favorite": "0", "given_title": "DCI, Concerns and Readable Code - Code Climate Blog", "given_url": "http://blog.codeclimate.com/blog/2012/12/19/dci-concerns-and-readable-code/", "has_image": "0", "has_video": "0", "is_article": "1", "is_index": "0", "item_id": "268532153", "resolved_id": "268532153", "resolved_title": "DCI, Concerns and Readable Code", "resolved_url": "http://blog.codeclimate.com/blog/2012/12/19/dci-concerns-and-readable-code/", "sort_id": 9, "status": "0", "tags": {"10min": {"item_id": "268532153", "tag": "10min"}}, "time_added": "1394027787", "time_favorited": "0", "time_read": "0", "time_updated": "1395513588", "word_count": "1582" }, "369440693": { "excerpt": "About a week ago I started looking at Elixir. Elixir had been one of those things that I was vaguely aware of but had not yet time to look at in any detail.  This all changed when I discovered the announcement that Dave Thomas was publishing Programming Elixir.", "favorite": "0", "given_title": "A Week with Elixir", "given_url": "http://joearms.github.io/2013/05/31/a-week-with-elixir.html", "has_image": "0", "has_video": "0", "is_article": "1", "is_index": "0", "item_id": "369440693", "resolved_id": "369440693", "resolved_title": "A Week with Elixir", "resolved_url": "http://joearms.github.io/2013/05/31/a-week-with-elixir.html", "sort_id": 15, "status": "0", "tags": { "20min": {"item_id": "369440693", "tag": "20min"}, "code": {"item_id": "369440693", "tag": "code"}, "elixr": {"item_id": "369440693", "tag": "elixr"} }, "time_added": "1393151091", "time_favorited": "0", "time_read": "0", "time_updated": "1395513588", "word_count": "3636" }, "4714": { "excerpt": "The fundamental choice is between Service Locator and Dependency Injection. The first point is that both implementations provide the fundamental decoupling that''s missing in the naive example - in both cases application code is independent of the concrete implementation of the service interface.", "favorite": "0", "given_title": "Inversion of Control Containers and the Dependency Injection pattern", "given_url": "http://www.martinfowler.com/articles/injection.html", "has_image": "0", "has_video": "0", "is_article": "1", "is_index": "0", "item_id": "4714", "resolved_id": "4714", "resolved_title": "Inversion of Control Containers and the Dependency Injection pattern", "resolved_url": "http://martinfowler.com/articles/injection.html", "sort_id": 84, "status": "0", "tags": { "30min": {"item_id": "4714", "tag": "30min"}, "code": {"item_id": "4714", "tag": "code"} }, "time_added": "1372609120", "time_favorited": "0", "time_read": "0", "time_updated": "1395521448", "word_count": "2010" }, "490352696": { "authors": { "992632": { "author_id": "992632", "item_id": "490352696", "name": "Siva Gollapalli", "url": "http://blog.joshsoftware.com/author/siva543/" } }, "excerpt": "Writing ‘good code’ is always a challenge for every project. Unfortunately, we always associate it with development and not tests. What about automation test code? Ever notice that you have write more automation code than the actual lines of development code?", "favorite": "0", "given_title": "Pro tips for writing better rspec tests | Josh Software – Where Programming", "given_url": "http://blog.joshsoftware.com/2013/11/23/pro-tips-for-writing-better-rspec-tests/?utm_source=rubyweekly&utm_medium=email", "has_image": "0", "has_video": "0", "is_article": "1", "is_index": "0", "item_id": "490352696", "resolved_id": "487417150", "resolved_title": "Pro tips for writing better rspec tests", "resolved_url": "http://blog.joshsoftware.com/2013/11/23/pro-tips-for-writing-better-rspec-tests/", "sort_id": 78, "status": "0", "tags": {"5min": {"item_id": "490352696", "tag": "5min"}}, "time_added": "1385715335", "time_favorited": "0", "time_read": "0", "time_updated": "1395513589", "word_count": "972" }, "497902378": { "authors": { "14527259": { "author_id": "14527259", "item_id": "497902378", "name": "Brad Wright", "url": "https://gdstechnology.blog.gov.uk/author/bradwright/" } }, "excerpt": "As you read in the previous post in this series, we have built a frontline router using Go.  If you cast an eye across our many and varied open source projects, the common theme is that they’re generally written in Ruby.", "favorite": "0", "given_title": "Choosing Go for a new project | Technology at GDS", "given_url": "https://gdstechnology.blog.gov.uk/2013/12/09/choosing-go-for-a-new-project/", "has_image": "0", "has_video": "0", "is_article": "1", "is_index": "0", "item_id": "497902378", "resolved_id": "497902378", "resolved_title": "Choosing Go for a new project", "resolved_url": "https://gdstechnology.blog.gov.uk/2013/12/09/choosing-go-for-a-new-project/", "sort_id": 72, "status": "0", "tags": {"5min": {"item_id": "497902378", "tag": "5min"}}, "time_added": "1386594357", "time_favorited": "0", "time_read": "0", "time_updated": "1395513589", "word_count": "1082" } }, "since": 1396345500, "status": 1 }'
+    http_version:
+  recorded_at: Tue, 01 Apr 2014 09:45:05 GMT
+recorded_with: VCR 2.9.0
