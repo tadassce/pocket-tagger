@@ -6,8 +6,14 @@ describe Article do
     Article.new('item_id' => '58').id.must_equal '58'
   end
 
-  it 'has the word count when passed' do
-    Article.new('word_count' => '123').word_count.must_equal 123
+  describe '#word_count' do
+    it 'has the word count when passed' do
+      Article.new('word_count' => '123').word_count.must_equal 123
+    end
+
+    it 'defaults to 0 if not found in data' do
+      Article.new({}).word_count.must_equal 0
+    end
   end
 
   describe '#tags' do

@@ -11,7 +11,7 @@ class Article
   end
 
   def word_count
-    data.fetch('word_count').to_i
+    data.fetch('word_count', 0).to_i
   end
 
   def tags
