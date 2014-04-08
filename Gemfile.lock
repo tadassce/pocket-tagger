@@ -37,6 +37,7 @@ GEM
     guard-pow (2.0.0)
       guard (~> 2.0)
     hashie (2.1.0)
+    kgio (2.9.2)
     listen (2.7.1)
       celluloid (>= 0.15.2)
       celluloid-io (>= 0.15.0)
@@ -67,6 +68,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    raindrops (0.13.0)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.3)
       ffi (>= 0.5.0)
@@ -88,6 +90,10 @@ GEM
     thor (0.19.1)
     tilt (1.4.1)
     timers (1.1.0)
+    unicorn (4.8.2)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     vcr (2.9.0)
     webmock (1.17.4)
       addressable (>= 2.2.7)
@@ -109,5 +115,6 @@ DEPENDENCIES
   simplecov
   sinatra (~> 1.4.4)
   slim (~> 2.0.2)
+  unicorn
   vcr
   webmock

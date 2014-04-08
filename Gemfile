@@ -7,6 +7,10 @@ gem 'pocket-ruby', '~> 0.0.5', require: 'pocket'
 gem 'rack-flash3', '~> 1.0.5', require: 'rack/flash'
 gem 'slim',        '~> 2.0.2'
 
+group :production do
+  gem 'unicorn'
+end
+
 group :test do
   gem 'minitest',          require: 'minitest/autorun'
   gem 'minitest-colorize', github:  'ysbaddaden/minitest-colorize'
