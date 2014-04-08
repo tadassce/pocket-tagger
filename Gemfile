@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.1'
+
 gem 'sinatra',     '~> 1.4.4'
 gem 'pocket-ruby', '~> 0.0.5', require: 'pocket'
 gem 'rack-flash3', '~> 1.0.5', require: 'rack/flash'
