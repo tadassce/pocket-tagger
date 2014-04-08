@@ -1,3 +1,5 @@
+[![Code Climate](https://img.shields.io/codeclimate/github/tadassce/pocket-tagger.svg)](https://codeclimate.com/github/tadassce/pocket-tagger)
+
 # Pocket Tagger
 
 A tool that tags your [Pocket](https://getpocket.com/) articles with how
