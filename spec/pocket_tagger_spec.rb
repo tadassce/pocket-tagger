@@ -44,8 +44,8 @@ describe PocketTagger do
       pt.stubs(:articles).returns(articles)
 
       args = [
-        { action: :tags_add, item_id: '7', tags: '2min' },
-        { action: :tags_add, item_id: '8', tags: '5min' }
+        { action: :tags_add, item_id: '7', tags: '5min' },
+        { action: :tags_add, item_id: '8', tags: '10min' }
       ]
       @client.expects(:modify).with(args)
 

@@ -63,8 +63,8 @@ describe Article do
       end
     end
 
-    it 'defaults to 250 words per minute' do
-      Article.new('word_count' => '500').tag_name.must_equal '2min'
+    it 'defaults to 150 words per minute' do
+      Article.new('word_count' => '500').tag_name.must_equal '5min'
     end
 
     it 'doesnt tag the very short articles' do

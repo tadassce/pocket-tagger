@@ -3,7 +3,7 @@ class Article
 
   def initialize(data, speed = nil)
     @data  = data
-    @speed = speed || 250
+    @speed = speed || 150
   end
 
   def id
