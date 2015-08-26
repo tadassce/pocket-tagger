@@ -1,4 +1,4 @@
-require 'pocket'
+require 'pocket-ruby'
 require_relative 'article'
 require_relative '../config/pocket'
 
