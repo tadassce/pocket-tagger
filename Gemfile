@@ -25,8 +25,3 @@ end
 group :test, :development do
   gem 'awesome_print'
 end
-
-group :development do
-  gem 'guard-minitest', require: false
-  gem 'guard-pow',      require: false
-end
