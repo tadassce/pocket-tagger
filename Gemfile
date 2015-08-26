@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.7'
 
 gem 'sinatra',     '~> 1.4.4'
 gem 'pocket-ruby', '~> 0.0.5', require: 'pocket'
